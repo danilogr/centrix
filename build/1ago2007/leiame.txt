@@ -1,0 +1,5 @@
+Versão Obsoleta
+---------------
+
+Apenas copiar este arquivo para o disquete
+( Com o BootLoader instalado nele )

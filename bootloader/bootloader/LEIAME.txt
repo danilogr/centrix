@@ -1,0 +1,20 @@
+Este é um simples bootloader para disquete com 2 estágios 
+O Disquete deve estar formatado para fat12
+todo o codigo foi escrito respeitando as 'normas' do NASM
+
+O arquivo vision.bin deve ser gravado no primero setor do disquete
+ele se encarrega de procurar o primeiro arquivo gravado da tabela de arquivos ( do FAT12 )
+e loada esse arquivo
+o segundo arquivo faz a busca por um arquivo .bin que tem um codigo binario pronto para ser
+executado ( nao sendo portanto de formato nenhum como ELF ou COFF )
+existem muitos bugs
+
+Lembrando
+o computador quando é ligado ele é iniciado, por questoes de compatibilidade, no chamado 'modo real',
+nesse modo o processador funciona como um processador de 16 bits e vc tem acesso a todas as interrupcoes
+da BIOS. O problema eh que com isso vc consegue acessar no maximo 1 mb de memoria
+para executar codigo 32bits vc deve colocar o sistema no 'modo protegido', nesse modo o processador
+tem suporte a processos, a 4gb de memoria ram, mas nao acessa as rotinas da BIOS.
+para ativar o modo protegido vc deve primeiro permitir o acesso aos 1mb de memoria ram ( ativando
+o GATE A20 ) e depois criando uma General Descriptor Table (GDT) e configurando ela
+existem outras necessidades mas cobrimos apenas as basicas.
