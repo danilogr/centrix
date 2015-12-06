@@ -1,3 +1,9 @@
-Simple project developed when I was 17 years old.
-It was using Windows with MingW compiler.
-It's bootloader probably will not work on most of the computers nowadays.
+The goal of this project was to have a draft operating system in  Protected Mode. Unfortunately, I never implemented task and task switching. Nevertheless, I learned a lot about computer architecture and operating systems because of this project. 
+
+It's important to mention that a lot of resources were quite useful and made this project possible:
+[*] http://www.osdever.net/tutorials/view/brans-kernel-development-tutorial
+[*] http://www.osdever.net
+[*] http://wiki.osdev.org/
+[*] http://numaboa.com
+
+By the way, back in 2007, I was a high school student with no formal training in Computer Science. Also, I had a computer with a floppy drive, and I only tested the two-stage bootloader with floppy disks. 
