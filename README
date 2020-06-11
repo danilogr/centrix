@@ -1,9 +1,31 @@
-The goal of this project was to have a draft operating system in  Protected Mode. Unfortunately, I never implemented task and task switching. Nevertheless, I learned a lot about computer architecture and operating systems because of this project. 
+Long time ago (2006-2007), during high school, I got quite interested in operating systems and computer architecture.
+At that time, I spent hours reading about things such as Interrupt Resquests (IRQ), Real and Protected Mode, bootloaders, kernels, 
+and these many other things that did not have a tangible meaning to a high-school student. Well, there is nothing better than
+practice to get a "feel" of how things really work.
 
-It's important to mention that a lot of resources were quite useful and made this project possible:
-[*] http://www.osdever.net/tutorials/view/brans-kernel-development-tutorial
-[*] http://www.osdever.net
-[*] http://wiki.osdev.org/
-[*] http://numaboa.com
+This project - Centrix - was my pet operating system. Believe me or not, it made it to the Protected Mode. At that time,
+when I finally got access to the Protected Mode, it felt like I had landed on the moon. Playing around with operating system
+development can be quite challenging: when something goes wrong, you don't always have a `printf` available to you....
 
-By the way, back in 2007, I was a high school student with no formal training in Computer Science. Also, I had a computer with a floppy drive, and I only tested the two-stage bootloader with floppy disks. 
+Centrix featured a freaking !!two-stage boot loader!!. A 512 bytes FAT12 file reader that would load its kernel in the floppy disk.
+After loading its kernel, it would jump into Protected Mode and list the amount of RAM memory available, indexing every 4kb on a very primitive implementation of malloc.
+You could say that Centrix suffered of ADHD, as I never got around implementing multi-tasking.
+
+I keep this repository as a memento of great time, and a token of appreciation for those that inspired me to learn more and more about computer science.
+
+I am very thankful for the many strangers at forums[2] and wikis[3] that helped me through this jorney.
+A special thanks goes to Brandon Friesen and his amazing kernel development tutorial[1]. [1] was my main guide through this journey,
+and Brandon was quite nice through the many email messages we exchanged when I was stuck.
+
+While I am grateful to Brandon and the members of OSDever.net, I have to single out one person: Viktoria Tkotz - a.k.a. grandma Vicky.
+Grandma Vicky was a Brazilian M.D. that used her free time to author a series of blog posts on cryptography (and later on operating systems).
+Through her work, I was able to learn the basics of cryptography and later the basics of operating system. She was great at explaining complex
+concepts using intuitive analogies. Much of her work is still available at [4] (in Portuguese).
+
+Danilo Gasques (San Diego, 06/2020)
+
+References:
+[1] http://www.osdever.net/tutorials/view/brans-kernel-development-tutorial
+[2] http://www.osdever.net
+[3] http://wiki.osdev.org/
+[4] http://numaboa.com.br
